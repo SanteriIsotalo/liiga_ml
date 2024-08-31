@@ -33,12 +33,12 @@ except (NoSuchElementException, TimeoutException):
 data_list = []
 
 #season needs to be changed manually because of game numbers
-season = 2016
+season = 2024
 save_file_season = season-1
 
 #some seasons the games have absurd game numbers. the games should be from 1 to 450
 #this can't be looped, because 2015 for example has games from 7612 to 8061
-for game_number in range(7612,8062):
+for game_number in range(1,451):
     try:
         url = f'https://liiga.fi/fi/peli/{season}/{game_number}/tilastot'
         driver.get(url)
