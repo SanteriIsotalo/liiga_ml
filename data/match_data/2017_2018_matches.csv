@@ -1,4 +1,4 @@
-date,home_team,home_goals,away_team,away_goals,OT,home_shots,away_shots,home_sog,away_sog,home_sog_pct,away_sog_pct,home_pp,away_pp,home_ppg,away_ppg,home_ppp,away_ppp
+﻿date,home_team,home_goals,away_team,away_goals,OT,home_shots,away_shots,home_sog,away_sog,home_sog_pct,away_sog_pct,home_pp,away_pp,home_ppg,away_ppg,home_ppp,away_ppp
 2017-09-08,Jukurit,0,KalPa,3,False,46,49,29,29,0.6304347826086957,0.5918367346938775,2,3,0,1,0.0,0.3333333333333333
 2017-09-08,HPK,1,Kärpät,2,False,48,44,24,30,0.5,0.6818181818181818,4,1,0,0,0.0,0.0
 2017-09-08,Ilves,0,Tappara,3,False,55,44,27,22,0.4909090909090909,0.5,3,2,0,1,0.0,0.5

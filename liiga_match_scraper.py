@@ -214,7 +214,7 @@ for game_number in range(1,451):
 
 df = pd.DataFrame(data_list)
 csv_file_path = os.getenv("CSV_FILE_PATH_MATCHES")
-df.to_csv(f'{csv_file_path}/{save_file_season}_{season}_matches.csv', index=False)       
+df.to_csv(f'{csv_file_path}/{save_file_season}_{season}_matches.csv', index=False, encoding='UTF-8-SIG')       
 driver.quit()
 
 

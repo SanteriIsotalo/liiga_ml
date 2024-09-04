@@ -1,4 +1,4 @@
-date,home_team,home_goals,away_team,away_goals,OT,home_shots,away_shots,home_sog,away_sog,home_sog_pct,away_sog_pct,home_pp,away_pp,home_ppg,away_ppg,home_ppp,away_ppp
+﻿date,home_team,home_goals,away_team,away_goals,OT,home_shots,away_shots,home_sog,away_sog,home_sog_pct,away_sog_pct,home_pp,away_pp,home_ppg,away_ppg,home_ppp,away_ppp
 2018-09-14,JYP,3,HIFK,4,True,43,44,26,27,0.6046511627906976,0.6136363636363636,5,3,2,1,0.4,0.3333333333333333
 2018-09-14,KalPa,3,Jukurit,4,True,58,34,25,22,0.43103448275862066,0.6470588235294118,5,2,1,1,0.2,0.5
 2018-09-14,KooKoo,5,SaiPa,6,True,55,55,35,34,0.6363636363636364,0.6181818181818182,8,5,3,2,0.375,0.4

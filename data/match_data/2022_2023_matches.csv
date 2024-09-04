@@ -1,4 +1,4 @@
-date,home_team,home_goals,away_team,away_goals,OT,home_shots,away_shots,home_sog,away_sog,home_sog_pct,away_sog_pct,home_pp,away_pp,home_ppg,away_ppg,home_ppp,away_ppp
+﻿date,home_team,home_goals,away_team,away_goals,OT,home_shots,away_shots,home_sog,away_sog,home_sog_pct,away_sog_pct,home_pp,away_pp,home_ppg,away_ppg,home_ppp,away_ppp
 2022-09-13,Tappara,3,TPS,1,False,48,36,29,22,0.6041666666666666,0.6111111111111112,1,1,0,0,0.0,0.0
 2022-09-14,HIFK,4,HPK,1,False,66,30,39,16,0.5909090909090909,0.5333333333333333,5,2,0,0,0.0,0.0
 2022-09-14,Ilves,3,Ässät,0,False,45,36,20,20,0.4444444444444444,0.5555555555555556,4,3,2,0,0.5,0.0

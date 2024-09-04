@@ -1,4 +1,4 @@
-date,home_team,home_goals,away_team,away_goals,OT,home_shots,away_shots,home_sog,away_sog,home_sog_pct,away_sog_pct,home_pp,away_pp,home_ppg,away_ppg,home_ppp,away_ppp
+﻿date,home_team,home_goals,away_team,away_goals,OT,home_shots,away_shots,home_sog,away_sog,home_sog_pct,away_sog_pct,home_pp,away_pp,home_ppg,away_ppg,home_ppp,away_ppp
 2023-09-12,Lukko,1,HPK,2,False,47,41,23,21,0.48936170212765956,0.5121951219512195,4,3,0,1,0.0,0.3333333333333333
 2023-09-13,Jukurit,4,KooKoo,1,False,64,46,42,20,0.65625,0.43478260869565216,3,0,0,0,0.0,0.3333333333333333
 2023-09-13,JYP,2,TPS,3,True,37,34,22,15,0.5945945945945946,0.4411764705882353,6,4,0,1,0.0,0.25

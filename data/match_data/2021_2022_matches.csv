@@ -1,4 +1,4 @@
-date,home_team,home_goals,away_team,away_goals,OT,home_shots,away_shots,home_sog,away_sog,home_sog_pct,away_sog_pct,home_pp,away_pp,home_ppg,away_ppg,home_ppp,away_ppp
+﻿date,home_team,home_goals,away_team,away_goals,OT,home_shots,away_shots,home_sog,away_sog,home_sog_pct,away_sog_pct,home_pp,away_pp,home_ppg,away_ppg,home_ppp,away_ppp
 2021-09-09,Lukko,3,TPS,5,False,52,44,26,26,0.5,0.5909090909090909,1,5,0,2,0.0,0.4
 2021-09-10,HPK,1,Tappara,3,False,40,32,21,13,0.525,0.40625,3,4,1,0,0.3333333333333333,0.0
 2021-09-10,Jukurit,2,KalPa,1,True,24,66,15,32,0.625,0.48484848484848486,2,4,0,0,0.0,0.0

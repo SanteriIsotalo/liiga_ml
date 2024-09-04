@@ -1,4 +1,4 @@
-date,home_team,home_goals,away_team,away_goals,OT,home_shots,away_shots,home_sog,away_sog,home_sog_pct,away_sog_pct,home_pp,away_pp,home_ppg,away_ppg,home_ppp,away_ppp
+﻿date,home_team,home_goals,away_team,away_goals,OT,home_shots,away_shots,home_sog,away_sog,home_sog_pct,away_sog_pct,home_pp,away_pp,home_ppg,away_ppg,home_ppp,away_ppp
 2019-09-12,HPK,2,Kärpät,3,False,45,39,25,21,0.5555555555555556,0.5384615384615384,4,1,0,0,0.0,0.0
 2019-09-13,Ilves,4,Tappara,5,False,42,37,25,24,0.5952380952380952,0.6486486486486487,5,2,2,1,0.4,0.5
 2019-09-13,JYP,3,HPK,2,False,43,47,28,31,0.6511627906976745,0.6595744680851063,1,2,0,1,0.0,0.5

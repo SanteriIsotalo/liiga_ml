@@ -1,4 +1,4 @@
-date,home_team,home_goals,away_team,away_goals,OT,home_shots,away_shots,home_sog,away_sog,home_sog_pct,away_sog_pct,home_pp,away_pp,home_ppg,away_ppg,home_ppp,away_ppp
+﻿date,home_team,home_goals,away_team,away_goals,OT,home_shots,away_shots,home_sog,away_sog,home_sog_pct,away_sog_pct,home_pp,away_pp,home_ppg,away_ppg,home_ppp,away_ppp
 2015-09-11,Blues,1,HIFK,6,False,45,55,27,37,0.6,0.6727272727272727,3,3,0,0,0.0,0.0
 2015-09-11,HPK,4,Pelicans,1,False,46,30,30,17,0.6521739130434783,0.5666666666666667,5,3,0,0,0.0,0.0
 2015-09-11,KalPa,1,Kärpät,2,True,35,49,15,23,0.42857142857142855,0.46938775510204084,4,4,0,1,0.0,0.25
@@ -447,4 +447,3 @@ date,home_team,home_goals,away_team,away_goals,OT,home_shots,away_shots,home_sog
 2016-03-10,KalPa,3,Lukko,2,False,32,44,19,30,0.59375,0.6818181818181818,4,3,0,1,0.0,0.3333333333333333
 2016-03-10,Pelicans,1,Kärpät,4,False,39,57,17,26,0.4358974358974359,0.45614035087719296,2,5,0,2,0.0,0.4
 2016-03-10,SaiPa,1,HIFK,3,False,33,57,23,39,0.696969696969697,0.6842105263157895,4,5,0,1,0.0,0.2
-2016-03-10,Ässät,1,TPS,2,True,33,63,16,30,0.48484848484848486,0.47619047619047616,2,2,0,0,0.0,0.0
