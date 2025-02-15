@@ -1,12 +1,16 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.common.exceptions import NoSuchElementException, TimeoutException
+from selenium.common.exceptions import NoSuchElementException, TimeoutException, JavascriptException
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 import os
 from dotenv import load_dotenv
 from datetime import datetime
 import pandas as pd
+import json
+import time
 
 #load .env file
 load_dotenv()
@@ -14,6 +18,7 @@ load_dotenv()
 #disable search engine question when opening chrome 
 options = webdriver.ChromeOptions()
 options.add_argument("--disable-search-engine-choice-screen");
+options.add_argument("--headless")
 
 driver_path = os.getenv("DRIVER_PATH")
 
@@ -31,14 +36,17 @@ except (NoSuchElementException, TimeoutException):
 
 #list will be used to create dataframe
 data_list = []
+shots_data = []
 
 #season needs to be changed manually because of game numbers
-season = 2024
+season = 2019
 save_file_season = season-1
 
 #some seasons the games have absurd game numbers. the games should be from 1 to 450
 #this can't be looped, because 2015 for example has games from 7612 to 8061
-for game_number in range(1,451):
+for game_number in range(1,452):
+    game_id = game_number
+    print(game_id)
     try:
         url = f'https://liiga.fi/fi/peli/{season}/{game_number}/tilastot'
         driver.get(url)
@@ -185,10 +193,57 @@ for game_number in range(1,451):
     
     if int(away_team_pp) != 0:
         away_team_ppp = float(away_team_ppg)/float(away_team_pp)
+        
+    #shot rink map
+    try:
+        url = f'https://liiga.fi/fi/peli/{season}/{game_number}/kaukalokartat'
+        driver.get(url)
+        
+        WebDriverWait(driver, 10).until(lambda d: d.execute_script("return typeof Konva !== 'undefined'"))
+        time.sleep(3)
+
+        # shorts with circle
+        shots_js = """
+        return Konva.stages[0].find('Circle').map(e => ({
+            x: e.attrs.x,
+            y: e.attrs.y,
+            color: e.attrs.fill || "unknown",
+            isGoal: e.attrs.fill && e.attrs.fill.startsWith("rgb") ? true : false
+        }));
+        """
+        shots = driver.execute_script(shots_js)
+
+        # shots with square (blocked)
+        blocked_js = """
+        return Konva.stages[0].find('Rect').map(e => ({
+            x: e.attrs.x,
+            y: e.attrs.y,
+            type: "blocked"
+        }));
+        """
+        blocked_shots = driver.execute_script(blocked_js)
+
+        all_shots = {
+            "game_id": game_number,
+            "date": date.strftime("%Y-%m-%d"),
+            "home_team": home_team_name,
+            "away_team": away_team_name,
+            "shots": shots,
+            "goals": [s for s in shots if s["isGoal"]],
+            "blocked": blocked_shots
+        }
+
+        shots_data.append(all_shots)
+
+    except JavascriptException as e:
+        print("error with map")
+        continue
+        
     
     
     #data to dictionary
     data = {
+            "game_id": game_id,
             "date": date,
             "home_team": home_team_name,
             "home_goals": int(home_team_goals),
@@ -216,5 +271,10 @@ df = pd.DataFrame(data_list)
 csv_file_path = os.getenv("CSV_FILE_PATH_MATCHES")
 df.to_csv(f'{csv_file_path}/{save_file_season}_{season}_matches.csv', index=False, encoding='UTF-8-SIG')       
 driver.quit()
+
+#rink map
+json_file_path = os.getenv("CSV_FILE_PATH_MATCHES")
+with open(f"{json_file_path}/shots_data_map_{save_file_season}_{season}.json", "w") as f:
+    json.dump(shots_data, f, indent=2)
 
 
